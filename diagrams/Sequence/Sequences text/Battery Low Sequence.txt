@@ -1,0 +1,11 @@
+title Battery Low Sequence
+actor User
+participant MainWindow
+participant Neureset
+User->MainWindow: User presses start button
+MainWindow->Neureset: startButtonHandler()
+alt battery below 30%
+Neureset->Neureset: batteryDrain(30) 
+end
+Neureset->MainWindow: updateBatteryIcon()
+Neureset->MainWindow: display error message

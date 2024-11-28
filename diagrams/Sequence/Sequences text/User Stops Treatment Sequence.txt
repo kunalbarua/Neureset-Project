@@ -1,0 +1,10 @@
+title User Stops Treatment Sequence
+
+actor User
+participant MainWindow
+participant Neureset
+
+User->MainWindow: User presses stop button
+MainWindow->Neureset: stopButtonHandler()
+Neureset->Neureset: End treatment\nsession
+Neureset->MainWindow: Display main menu

@@ -1,0 +1,13 @@
+title Connection Loss Sequence
+Probe->Headset: contact loss
+Headset->Neureset: connection loss
+Neureset->Mainwindow: blue light off
+Neureset->Mainwindow: red light on
+Neureset->Mainwindow: display error message
+Neureset->Neureset: pause therapy
+Probe->Headset: contact reestablished
+Headset->Neureset: connection reestablished
+Neureset->Mainwindow: blue light on
+Neureset->Mainwindow: red light off
+Neureset->Mainwindow: remove error message
+Neureset->Neureset: unpause therapy

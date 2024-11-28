@@ -1,0 +1,16 @@
+title User Pauses Treatment Sequence
+
+actor User
+participant MainWindow
+participant Neureset
+
+User->MainWindow: User presses\npause button
+MainWindow->Neureset: pauseButtonHandler()
+
+alt case 1: user resumes within 5 mins
+User->MainWindow: User presses start button
+space -3
+MainWindow->Neureset: startButtonHandler()
+else case 2: no response within 5 mins
+MainWindow->Neureset: powerOff()
+end
