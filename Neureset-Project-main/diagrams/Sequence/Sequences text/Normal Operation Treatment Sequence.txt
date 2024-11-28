@@ -1,0 +1,53 @@
+title Normal Operation of Treatment  
+
+actor User
+participant MainWindow
+participant Neureset
+participant Headset
+participant Probes
+participant SessionManager
+
+User->MainWindow: User presses\npower button 
+MainWindow->Neureset: powerOn() 
+User->MainWindow: User puts on headset 
+MainWindow->Headset: connect() 
+Neureset->MainWindow: Blue light turns on 
+User->MainWindow: User presses start button
+space -3
+MainWindow->Neureset: startTherapy()
+space -3
+Neureset->Neureset: batteryDrain(30) 
+
+
+loop for all Probes, getting baseline frequencies
+Headset->Probes: measureWaveform()
+Probes-->Neureset: Returns dominant frequency
+end 
+
+loop for 4 rounds 
+Neureset->Neureset: startRound(offset) 
+
+loop for all Probes 
+Headset->Probes: getWaveform() 
+Probes-->Neureset: Returns dominant frequency 
+space 1
+Neureset->MainWindow: Green light turns on 
+
+loop 16 times in a second 
+Neureset->Probes: applyFeedback(offset) 
+end 
+
+Neureset->MainWindow: Green light turns off 
+end 
+
+Neureset->MainWindow: updateTimer() 
+Neureset->MainWindow: updateProgressBar() 
+end 
+
+loop for all Probes, getting final baseline frequencies 
+Headset->Probes: measureWaveform() 
+Probes-->Neureset: Returns dominant frequency 
+end 
+
+Neureset->SessionManager: writeToBuffer(currSession) 
+Neureset->SessionManager: saveBufferToDisk() 

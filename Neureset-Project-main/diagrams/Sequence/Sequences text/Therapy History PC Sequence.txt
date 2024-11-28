@@ -1,0 +1,20 @@
+title PC Viewing Sequence Diagram
+
+participant User
+participant MainWindow
+participant PC
+participant SineWave
+participant Neureset
+
+User->MainWindow: Presses the PC button
+MainWindow->PC: uploadButtonHandler()
+PC->MainWindow: Exit button is pressed
+PC->Neureset: Requests session log details
+Neureset->PC: Returns session log details
+PC->PC:Displays session details in list with date and time
+User->PC:Selects the required session
+PC->SineWave:Extracts the waveform graphs for each probe \nby providing frequencies for the selected session
+PC->PC:Displays the waveform graph
+User->PC: Selects the interested probe from a list of tabs
+PC->PC: Displays waveform graph for the selected probe
+PC->MainWindow: Exit button is pressed
