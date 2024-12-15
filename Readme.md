@@ -93,6 +93,7 @@ Kunal Barua
     <li>Created PC class which displays the session log information in greater detail</li>
     <li>Added functionality for PC button which opens up a new window with PC ui and session log details.</li>
     <li>Implemented the functionality for Menu in collaboartion with my teammates, which takes appropriate action based on which menu item is selected</li>
+    <li>Developed a sine wave generator function leveraging principles from digital signal processing, including the Nyquist Theorem and angular frequency calculation ( 𝜔 = 2 𝜋 𝑓 ω=2πf), to produce discrete time-domain samples.</li>>
     <li>Implemented functionality for menu button which takes back the Neureset device to main menu.</li>
     <li>Worked on Use Cases and requirements with team</li>
     <li>Contributed to UML case diagram in collabotation with the team </li>
