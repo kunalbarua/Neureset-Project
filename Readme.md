@@ -4,6 +4,9 @@
 <h2>Neureset - Direct Neurofeedback EEG Device</h2>
 <p>Simulation of the consumer EEG direct neurofeedback device called Neureset based on the LENS Neurofeedback system.</p>
 
+![Alt text](./PC-View.png)
+
+
 <h2>Team Members:</h2>
 <ul>
     <li>Adam Esanhaji: &nbsp;&nbsp;&nbsp;&nbsp; adamesanhaji@cmail.carleton.ca</li>
