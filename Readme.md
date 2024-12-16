@@ -6,12 +6,12 @@
 
 
 <ul>
-
-    <li>Console View</li>
-    ![Alt text](./Console-View.png)
     
-    <li>PC View</li>
-    ![Alt text](./PC-View.png)
+<li>Console View</li>
+![Alt text](./Console-View.png)
+
+<li>PC View</li>
+![Alt text](./PC-View.png)
 
 
 </ul>
